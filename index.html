@@ -14,45 +14,83 @@
 </head>
 
 <body>
-  <div id="buttons">
-    <button data-person="arnold schwarzenegger">
-      I'll be back
-    </button>
-    <button data-person="michael j fox">
-      My happiness grows in direct proportion to my acceptance,
-      and in inverse proportion to my expectations.
-    </button>
-    <button data-person="lady gaga">
-      It doesn't him, or capital H-I-M
-    </button>
-    <button data-person="obama">
-      Hope
-    </button>
-    <button data-person="taylor swift">
-      Baby now we got bad blood
-    </button>
 
-    <!-- STEP ONE: Open this file in the browser and click on the buttons. Watch what happens -->
+<div class="city">
+  
+<audio id="pokesong" src="https://a.tumblr.com/tumblr_m2c1c9uMBL1rtntgko1.mp3"></audio> 
+<button onclick="playpokesong()">►</button>
+<button onclick="pausepokesong()"> ❚❚ </button>
+  
+<div class="grass">
+  <div class="river"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="tree"></div>
+  <div class="path"></div>
+  <div class="pathend"></div>
+  <div class="flower">
+         <span class="petal"></span>
+         <span class="petal"></span>
+         <span class="petal"></span>
+  </div>
+  <div class="longgrass"></div>
+  <div class="longgrass"></div>
+  <div class="flower2">
+         <span class="petal"></span>
+         <span class="petal"></span>
+         <span class="petal"></span>
+  </div>
+  <div class="flower3">
+         <span class="petal"></span>
+         <span class="petal"></span>
+         <span class="petal"></span>
+  </div>
+  <div class="house">
+        <div class="houseshadow"></div>
+        <div class="door"></div>
+        <div class="window"></div>
+        <div class="roof">
+              <div class="roofwindow"></div
+       </div><!--roof-->
+  </div><!--house-->
+  <div class="pokeball"></div>
+          
+</div><!--grass-->
+    <div class="pikachu">
+            <div class="head"></div>
+            <div class="backfeet"></div>
+            <div class="frontfeet"></div>
+          </div>
+</div><!--city-->
 
-    <!-- STEP TWO: between the dashed lines below
-            * add three more buttons
-            * add a data-person attribute of famous people you know
-            * with a quote said by them -->
-
-    <!-- **************************************** -->
-
-    <!-- YOUR BUTTONS GO HERE!!!!!! Obviously delete this text after you put them between the dashed lines here.  -->
-
-    <!-- **************************************** -->
-
-
-    <!-- STEP THREE: open this file in the browser and click on your buttons. If they don't work, then fix your buttons -->
-
-    <!-- STEP FOUR: go over the JavaScript with your partners, and explain the lines of code to each other. -->
-
+<div id="gifs-appear-here">
   </div>
 
-  <div id="gifs-appear-here">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>Add a button to search for a gif!</h2>
+
+  <div id="buttons">
+    <button data-person="charmander">
+      Charmander
+    </button>
+ 
+    
+
   </div>
 
   <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -79,6 +117,45 @@
           }
         });
     });
+
+    var audio = document.getElementById("pokesong");
+
+function playpokesong() {
+  audio.play();
+}
+
+function pausepokesong() {
+  audio.pause();
+}
+
+
+
+
+
+//grass B3E061
+//grassdark 94B365
+//grassshadwo 9FC754
+
+//plantlight B2E50E
+//plantdark 4C9E0C
+
+//greylight  F4F0ED
+//greymid D5CDCA
+//greydark  A09292
+//bluegreylight B6C6C5
+//bluegreydark  9EACAD
+
+//bluelight 2CD7AD
+//bluedark 24BFA0
+
+//yellow FDC33E
+//orange EE901F
+//brown B68F58
+//browndark 987543
+//red F67F7B
+//reddark AB5B66
+
+//road DDE3E3
   </script>
 </body>
 
