@@ -702,3 +702,10 @@ body {
 }
 
 
+#gifs-appear-here
+{
+	display: inline-block;
+	background-color: white;
+	width: 1200px;
+	float: left;
+}
