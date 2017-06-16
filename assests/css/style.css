@@ -709,3 +709,9 @@ body {
 	width: 1200px;
 	float: left;
 }
+
+#pokemonContent
+
+{
+	width: 100%;
+}
