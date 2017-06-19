@@ -18,18 +18,6 @@
   <div class="container">
     <h1>Search for a Pokemon!</h1>
 
-    <!-- Movies will get dumped here -->
-    <div id="pokemon-view"></div>
-
-    <form data-animal id="pokemon-form">
-      <label for="pokemon-input">Add a Pokemon</label>
-      <input type="text" id="pokemon-input">
-      <br>
-
-      <!-- Button triggers new movie to be added -->
-      <input id="add-pokemon" type="submit" value="submit">
-    </form>
-
 </div>
 
   <button data-animal="charmander">
@@ -67,7 +55,17 @@
     </button>
        <button data-animal="butterfree">
       Butterfree
-    </button>
+    </button> <div id="pokemon-view"></div>
+
+    <form data-animal id="pokemon-form">
+      <label for="pokemon-input">Add a Pokemon</label>
+      <input type="text" id="pokemon-input">
+      <br>
+
+     
+      <input id="add-pokemon" type="submit" value="submit">
+    </form>
+
   <div id="gifs-appear-here">
   </div>
 
@@ -141,80 +139,68 @@
 
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript">
-      // Initial array of movies
+
       var pokemon = [""];
 
-      // Function for displaying movie data
+
       function renderButtons() {
 
         $("#pokemon-view").html("");
 
-        // Delete the content inside the movies-view div prior to adding new movies
-        // (this is necessary otherwise you will have repeat buttons)
         for (i = 0; i < pokemon.length; i++) {
           $("#pokemon-view").append('<button type="button" class="btn btn-secondary">' + pokemon[i] + '</button>');
         }
-        // Loop through the array of movies, then generate buttons for each movie in the array
 
       }
 
-      // This function handles events where the add movie button is clicked
       $("#add-pokemon").on("click", function(event) {
-        // event.preventDefault() prevents submit button from trying to send a form.
-        // Using a submit button instead of a regular button allows the user to hit
-        // "Enter" instead of clicking the button if desired
+
         event.preventDefault();
 
         var inputValue = $("#pokemon-input").val().trim();
 
         pokemon.push(inputValue);
 
-        //add different attr for img tags
-        //bring in attr and classes as defined by the on click functions
-        //add in document.ready at the start of the file
-
-
-        // Write code to grab the text the user types into the input field
-        // Write code to add the new movie into the movies array
-
-        // The renderButtons function is called, rendering the list of movie buttons
         renderButtons();
+
+        $("#StefTastan").hide();
       });
 
-      // Calling the renderButtons function to display the initial list of movies
       renderButtons();
 
       $("button").on("click", function() {
-      // Grabbing and storing the data-animal property value from the button
+
       var animal = $(this).attr("data-animal");
-      // Constructing a queryURL using the animal name
+
       var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
-      // Performing an AJAX request with the queryURL
+
+          $("#StefTastan").hide();
+
       $.ajax({
           url: queryURL,
           method: "GET"
         })
-        // After data comes back from the request
+
         .done(function(response) {
           console.log(queryURL);
           console.log(response);
-          // storing the data from the AJAX request in the results variable
+
           var results = response.data;
-          // Looping through each result item
+
           for (var i = 0; i < results.length; i++) {
-            // Creating and storing a div tag
+
             var animalDiv = $("<div>");
-            // Creating a paragraph tag with the result item's rating
+
             var p = $("<p>").text("Rating: " + results[i].rating);
-            // Creating and storing an image tag
+
             var animalImage = $("<img>");
-            // Setting the src attribute of the image to a property pulled off the result item
+
             animalImage.attr("src", results[i].images.fixed_height.url);
-            // Appending the paragraph and image tag to the animalDiv
+
             animalDiv.append(p);
             animalDiv.append(animalImage);
-            // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
+
             $("#gifs-appear-here").prepend(animalDiv);
           }
         });
