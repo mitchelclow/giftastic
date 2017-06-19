@@ -18,7 +18,7 @@
 <body>
 
   <div class="container" style="text-align: center;">
-    <h1 style="font-family: 'Rubik', sans-serif;">Search for Pokemon GIFs!</h1>
+    <h1 class="pokemonHeader" style="font-family: 'Rubik', sans-serif; size: 40px;">Search for Pokemon GIFs!</h1>
 
 </div>
 
@@ -182,7 +182,7 @@
 
       var animal = $(this).attr("data-animal");
 
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
 
           $("#StefTastan").hide();

@@ -715,3 +715,20 @@ body {
 {
 	width: 100%;
 }
+
+.pokemonHeader
+
+{
+	
+  float: left;
+  width: 100%;
+  height: 90px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background: #ee6b2f;
+}
