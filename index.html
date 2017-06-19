@@ -8,6 +8,7 @@
     <title>Pokemon Gif Search Tool</title>
 
     <link rel="stylesheet" type="text/css" href="assests/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assests/CreativeButtons/css/component.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assests/js/javascript.js"></script>
 
@@ -15,47 +16,51 @@
 
 <body>
 
-  <div class="container">
+  <div class="container" style="text-align: center;">
     <h1>Search for a Pokemon!</h1>
 
 </div>
 
-  <button data-animal="charmander">
+  <div class=pokemonButton style="text-align: left;">
+  <button data-animal="charmander" class="btn btn-2 btn-2g">
       Charmander 
     </button>
-     <button data-animal="bulbasaur">
+     <button data-animal="bulbasaur" class="btn btn-2 btn-2g">
       Bulbasaur
     </button>
-    <button data-animal="squirtle">
+    <button data-animal="squirtle" class="btn btn-2 btn-2g">
       Squirtle
     </button>
-       <button data-animal="jigglypuff">
+       <button data-animal="jigglypuff" class="btn btn-2 btn-2g">
       Jigglypuff
     </button>
-       <button data-animal="snorlax">
+       <button data-animal="snorlax" class="btn btn-2 btn-2g">
       Snorlax
     </button>
-       <button data-animal="charizard">
+       <button data-animal="charizard" class="btn btn-2 btn-2g">
       Charizard
     </button>
-      <button data-animal="lapras">
+      <button data-animal="lapras" class="btn btn-2 btn-2g">
       Lapras 
     </button>
-     <button data-animal="pichu">
+     <button data-animal="pichu" class="btn btn-2 btn-2g">
       Pichu
     </button>
-    <button data-animal="sudowoodo">
+    <button data-animal="sudowoodo" class="btn btn-2 btn-2g">
       Sudowoodo
     </button>
-       <button data-animal="mewtwo">
+       <button data-animal="mewtwo" class="btn btn-2 btn-2g">
       Mewtwo
     </button>
-       <button data-animal="eevee">
+       <button data-animal="eevee" class="btn btn-2 btn-2g">
       Eevee
     </button>
-       <button data-animal="butterfree">
+       <button data-animal="butterfree" class="btn btn-2 btn-2g">
       Butterfree
-    </button> <div id="pokemon-view"></div>
+    </button>
+
+    </div>
+    <div id="pokemon-view"></div>
 
     <form data-animal id="pokemon-form">
       <label for="pokemon-input">Add a Pokemon</label>
@@ -63,7 +68,7 @@
       <br>
 
      
-      <input id="add-pokemon" type="submit" value="submit">
+      <input id="add-pokemon" type="submit" value="submit" class="btn btn-2 btn-2i">
     </form>
 
   <div id="gifs-appear-here">
