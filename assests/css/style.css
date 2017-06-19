@@ -705,9 +705,8 @@ body {
 #gifs-appear-here
 {
 	display: inline-block;
-	background-color: white;
-	width: 1200px;
-	float: left;
+	background-color: #e8f5ed;
+	width: 700px;
 }
 
 #pokemonContent
