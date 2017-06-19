@@ -705,9 +705,10 @@ body {
 #gifs-appear-here
 {
 	display: inline-block;
-	background-color: #e8f5ed;
 	width: 700px;
 	text-align: center;
+	padding-top: 50px;
+	padding-left: 407px;
 }
 
 #pokemonContent
@@ -731,4 +732,20 @@ body {
   text-align: center;
   text-decoration: none;
   background: #ee6b2f;
+}
+
+.footerClass{
+
+  float: left;
+  width: 100%;
+  height: 90px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 90px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background: #5e5e5e;
+
 }
