@@ -150,7 +150,7 @@
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script type="text/javascript">
 
-      var pokemon = [""];
+      var pokemon = [];
 
 
       function renderButtons() {
@@ -158,7 +158,9 @@
         $("#pokemon-view").html("");
 
         for (i = 0; i < pokemon.length; i++) {
-          $("#pokemon-view").append('<button type="button" class="btn btn-secondary">' + pokemon[i] + '</button>');
+          $("#pokemon-view").append('<button type="button" data-animal="'+ pokemon[i] +'" class="btn btn-2 btn-2g">' + pokemon[i] + '</button>');
+
+          $("button").on("click", clickHandler);
         }
 
       }
@@ -166,6 +168,8 @@
       $("#add-pokemon").on("click", function(event) {
 
         event.preventDefault();
+
+        $("#gifs-appear-here").empty();
 
         var inputValue = $("#pokemon-input").val().trim();
 
@@ -176,9 +180,12 @@
         $("#StefTastan").hide();
       });
 
-      renderButtons();
+      // renderButtons();
 
-      $("button").on("click", function() {
+      $("button").on("click", clickHandler
+    );
+
+      function clickHandler() {
 
       var animal = $(this).attr("data-animal");
 
@@ -214,9 +221,7 @@
             $("#gifs-appear-here").prepend(animalDiv);
           }
         });
-    });
-
-
+      }
     </script>
   </div>
 
