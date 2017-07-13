@@ -161,6 +161,7 @@
           $("#pokemon-view").append('<button type="button" data-animal="'+ pokemon[i] +'" class="btn btn-2 btn-2g">' + pokemon[i] + '</button>');
 
           $("button").on("click", clickHandler);
+
         }
 
       }
@@ -191,6 +192,9 @@
 
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+
+      $("#gifs-appear-here").empty();
 
           $("#StefTastan").hide();
 
